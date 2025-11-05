@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   // Configuração para GitHub Pages
-  base: "/odonto-system/",
+  base: "/",
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
