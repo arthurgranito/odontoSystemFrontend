@@ -18,7 +18,14 @@ export function AnimatedListItem({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <motion.div {...animations} layout className="mx-auto w-full">
+    <motion.div
+      layout
+      className="..."
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1, originY: 0.5 }}
+      exit={{ scale: 0.8, opacity: 0 }}
+      transition={{ type: "spring" as const, stiffness: 200, damping: 20 }}
+    >
       {children}
     </motion.div>
   );
@@ -34,7 +41,7 @@ export const AnimatedList = React.memo(
     const [index, setIndex] = useState(0);
     const childrenArray = useMemo(
       () => React.Children.toArray(children),
-      [children],
+      [children]
     );
 
     useEffect(() => {
@@ -66,7 +73,7 @@ export const AnimatedList = React.memo(
         </AnimatePresence>
       </div>
     );
-  },
+  }
 );
 
 AnimatedList.displayName = "AnimatedList";
