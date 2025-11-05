@@ -7,7 +7,6 @@ import GerarAgenda from "../components/common/GerarAgenda";
 import ExcluirAgenda from "../components/common/ExcluirAgenda";
 import { useAuth } from "../hooks/useAuth";
 import api from "../services/api";
-import type { Paciente } from "../types/Paciente";
 import { 
   Calendar, 
   Settings, 
@@ -231,7 +230,7 @@ const LiberacaoAgenda: React.FC = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ExcluirAgenda onAgendaExcluida={handleAgendaExcluida} user={user} />
+                  <ExcluirAgenda onAgendaExcluida={handleAgendaExcluida} />
                 </CardContent>
               </Card>
             )}
