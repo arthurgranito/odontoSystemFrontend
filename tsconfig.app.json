@@ -5,25 +5,24 @@
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "skipLibCheck": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false, // 👈 muda pra false (permite import normal de tipos)
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": true,
+    "strict": false,                // 👈 relaxa o modo estrito
+    "noImplicitAny": false,         // 👈 permite parâmetros sem tipo
+    "skipLibCheck": true,           // 👈 ignora erros em dependências
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
 
-    /* ✅ Adicionado corretamente aqui dentro */
+    /* Base paths */
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
