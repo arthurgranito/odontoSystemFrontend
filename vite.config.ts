@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   // Configuração para GitHub Pages
-  base: process.env.NODE_ENV === 'production' ? '/odonto-system/' : '/',
+  base: "/odonto-system/",
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
