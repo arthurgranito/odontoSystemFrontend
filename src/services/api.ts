@@ -18,7 +18,7 @@ api.interceptors.request.use(
     }
     return config;
   },
-  (error) => {
+  (error: any) => {
     return Promise.reject(error);
   }
 );
@@ -26,7 +26,7 @@ api.interceptors.request.use(
 // Response interceptor to handle auth errors
 api.interceptors.response.use(
   (response: AxiosResponse) => response,
-  (error) => {
+  (error: any) => {
     if (error.response?.status === 401) {
       localStorage.removeItem(STORAGE_KEYS.AUTH_TOKEN);
       window.location.href = '/login';

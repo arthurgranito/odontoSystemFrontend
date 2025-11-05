@@ -1,5 +1,5 @@
 // API Configuration
-export const API_BASE_URL = 'http://localhost:8080/api';
+export const API_BASE_URL = 'https://solid-dela-arthurgranito-4d00153f.koyeb.app';
 
 // Pagination
 export const DEFAULT_PAGE_SIZE = 10;
