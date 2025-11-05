@@ -4,6 +4,7 @@ export interface Escala {
   horaInicio: string;
   horaFim: string;
   intervaloMinutos: number;
+  ativo: boolean;
 }
 
 export interface EscalaFormData {
