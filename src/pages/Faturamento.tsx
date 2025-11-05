@@ -19,10 +19,8 @@ import {
   Filter,
   BarChart3,
   Users,
-  Clock,
   ChevronLeft,
   ChevronRight,
-  FileText
 } from "lucide-react";
 import {
   ResponsiveContainer,
@@ -34,14 +32,9 @@ import {
   PieChart,
   Pie,
   Cell,
-  LineChart,
-  Line
 } from "recharts";
-import * as XLSX from "xlsx";
-import { saveAs } from "file-saver";
-import { format, startOfMonth, endOfMonth, subMonths } from "date-fns";
-import { ptBR } from "date-fns/locale";
 import { exportarConsultasExcel } from "../utils/exportUtils";
+import { endOfMonth, startOfMonth, subMonths } from "date-fns";
 
 const Faturamento: React.FC = () => {
   const [expanded, setExpanded] = useState<boolean>(false);

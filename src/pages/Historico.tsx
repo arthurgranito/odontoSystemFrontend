@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
@@ -10,7 +9,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "../components/ui/popove
 import Sidebar from "../components/common/Sidebar";
 import ConsultaAgendadaCard from "../components/common/ConsultaAgendadaCard";
 import api from "../services/api";
-import { formatarData, formatarHora, formatarDataHora } from "../utils/formatters";
+import { formatarData } from "../utils/formatters";
 import { usePagination } from "../hooks/usePagination";
 import { exportarConsultasExcel } from "../utils/exportUtils";
 import { DEFAULT_PAGE_SIZE, CONSULTA_STATUS } from "../constants";
@@ -19,15 +18,11 @@ import {
   History, 
   Search, 
   Calendar as CalendarIcon, 
-  Clock,
-  User,
-  FileText,
   CheckCircle,
   XCircle,
   ChevronLeft,
   ChevronRight,
-  Download,
-  Filter
+  Download
 } from "lucide-react";
 
 const Historico: React.FC = () => {
